@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Master - Final Version with Validation & Cleanup</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Task Master App - Final (Sprint 3.2)</h1>
+
+  <div class="form-container">
+    <input type="text" id="taskName" placeholder="Task Name" />
+    <input type="date" id="taskDate" />
+    <button id="addBtn">Add Task</button>
+  </div>
+
+  <div id="error"></div>
+
+ <div style="margin: 20px 0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+  <label for="sortOption" style="font-weight: 600; color: #34495e;">Sort by:</label>
+  <select id="sortOption">
+    <option value="date">Date (newest to oldest)</option>
+    <option value="name">Task Name (A–Z)</option>
+    <option value="status">Status (completed first)</option>
+  </select>
+</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Task Name</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="tasksBody"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
